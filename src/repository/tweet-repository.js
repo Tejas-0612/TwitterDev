@@ -1,7 +1,7 @@
 import Tweet from '../models/tweet.js';
-import crudRepository from './crud-repository.js';
+import CrudRepository from './crud-repository.js';
 
-class TweetRepository extends crudRepository{
+class TweetRepository extends CrudRepository{
 
     constructor(){
         super(Tweet);

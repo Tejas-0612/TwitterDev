@@ -1,7 +1,8 @@
-class crudRepository{
+
+class CrudRepository{
     
-    constructor(){
-        this.model=new model();
+    constructor(Model){
+        this.model=new Model;
     }
 
     async create(data){
@@ -36,11 +37,12 @@ class crudRepository{
 
     async getAll(){
         try {
-            const result=await this.model.find({});
+            const result=await this.model.find();
+            console.log('results',result)
             return result;
         } catch (error) {
             console.log("Something went wrong in crud repo");
-            console.log(error);
+            throw error;
         }
     }
 
@@ -55,4 +57,4 @@ class crudRepository{
     }
 
 }
-export default crudRepository;
+export default CrudRepository;
