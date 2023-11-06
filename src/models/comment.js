@@ -1,4 +1,4 @@
-const mongoose=require('mongoose');
+import mongoose from 'mongoose';
 
 const commentSchema=new mongoose.Schema({
     content:{
@@ -12,8 +12,5 @@ const commentSchema=new mongoose.Schema({
 },{timestamps:true});
 
 const Comment=mongoose.model('Comment',commentSchema);
-module.exports=Comment;
+export default Comment;
 
-
-// git remote add origin https://github.com/Tejas-0612/TwitterDev.git
-// git push -u origin main
