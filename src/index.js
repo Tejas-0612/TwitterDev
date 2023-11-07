@@ -20,10 +20,10 @@ app.listen(PORT,async()=>{
     await connect();
     console.log('Mongo db connected');
    
-    const userRepo=new UserRepository();
-    const tweetRepo=new TweetRepository();
-    const tweets=await tweetRepo.getAll(0,10);
-    const users=await userRepo.getAll();
+    // const userRepo=new UserRepository();
+    // const tweetRepo=new TweetRepository();
+    // const tweets=await tweetRepo.getAll(0,10);
+    // const users=await userRepo.getAll();
     // console.log(users[0]);
     
     // const user=await userRepo.create({
@@ -31,7 +31,7 @@ app.listen(PORT,async()=>{
     //     password:'abcdef',
     //     name:'Tejas1'
     // });
-    const likeService=new LikeService();
-    await likeService.ToggleLike(tweets[0].id,'Tweet',users[0].id);
+    // const likeService=new LikeService();
+    // await likeService.ToggleLike(tweets[0].id,'Tweet',users[0].id);
     
 });  
